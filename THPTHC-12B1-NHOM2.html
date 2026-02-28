@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phát triển du lịch bền vững tại Nhà lưu niệm Nguyễn Chí Thanh</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#f4f8fb,#e8f1f8);
+    color:#222;
+    line-height:1.8;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:linear-gradient(135deg,#0f3057,#00587a,#008891);
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:15px;
+    letter-spacing:1px;
+}
+
+header p{
+    font-size:18px;
+    opacity:0.9;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.container-main{
+    display:flex;
+    max-width:1400px;
+    margin:auto;
+    padding:50px 20px;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    width:280px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    height:fit-content;
+    position:sticky;
+    top:140px;
+}
+
+.sidebar h3{
+    font-size:20px;
+    margin-bottom:20px;
+    color:#0f3057;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin-bottom:12px;
+}
+
+.sidebar ul li a{
+    text-decoration:none;
+    color:#333;
+    font-size:15px;
+    transition:0.3s;
+    position:relative;
+}
+
+.sidebar ul li a:hover{
+    color:#008891;
+    padding-left:6px;
+}
+
+.sidebar ul li a::after{
+    content:"";
+    position:absolute;
+    width:0%;
+    height:2px;
+    left:0;
+    bottom:-4px;
+    background:#008891;
+    transition:0.3s;
+}
+
+.sidebar ul li a:hover::after{
+    width:100%;
+}
+
+/* ===== CONTENT AREA ===== */
+.content-area{
+    flex:1;
+    margin-left:50px;
+}
+
+/* ===== SECTION CARD ===== */
+section{
+    background:white;
+    padding:45px;
+    margin-bottom:45px;
+    border-radius:18px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.06);
+    transition:0.4s;
+}
+
+section:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 50px rgba(0,0,0,0.12);
+}
+
+/* ===== SECTION TITLE ===== */
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:28px;
+    margin-bottom:25px;
+    background:linear-gradient(to right,#0f3057,#008891);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    border-left:6px solid #008891;
+    padding-left:15px;
+}
+
+/* ===== IMAGE BLOCK ===== */
+.image-block{
+    text-align:center;
+    margin:30px 0;
+}
+
+.image-block img{
+    max-width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.4s;
+}
+
+.image-block img:hover{
+    transform:scale(1.05);
+}
+
+/* ===== TABLE ===== */
+table{
+    width:100%;
+    margin:25px 0;
+    border-collapse:collapse;
+}
+
+table th{
+    background:#0f3057;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+/* ===== LIST ===== */
+ul li{
+    margin-bottom:8px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:linear-gradient(to right,#0f3057,#00587a);
+    color:white;
+    padding:50px;
+    text-align:center;
+    margin-top:60px;
+}
+
+/* ===== FADE IN EFFECT ===== */
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===== SCROLLBAR STYLE ===== */
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#008891;
+    border-radius:5px;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+#topBtn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#008891;
+    color:white;
+    border:none;
+    padding:14px 18px;
+    border-radius:50%;
+    font-size:18px;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+#topBtn:hover{
+    background:#0f3057;
+    transform:scale(1.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Luận văn Thạc sĩ - Du lịch văn hóa</h1>
+    <ul>
+        <li><a href="#chuong1">Chương 1</a></li>
+        <li><a href="#chuong2">Chương 2</a></li>
+        <li><a href="#chuong3">Chương 3</a></li>
+        <li><a href="#chuong4">Chương 4</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div>
+        <h2>Phát triển du lịch bền vững tại Nhà lưu niệm Nguyễn Chí Thanh</h2>
+        <p>Luận văn Thạc sĩ chuyên ngành Du lịch – định hướng khai thác giá trị văn hóa và bảo tồn di tích đến năm 2035.</p>
+    </div>
+</section>
+
+<section id="chuong1">
+    <h2 class="section-title">CHƯƠNG 1: CƠ SỞ LÝ LUẬN</h2>
+    <div class="content">
+
+        <h3>1.1. Khái niệm du lịch văn hóa</h3>
+        <p>
+        Du lịch văn hóa là hình thức du lịch dựa trên khai thác các giá trị văn hóa vật thể và phi vật thể
+        nhằm đáp ứng nhu cầu tìm hiểu, trải nghiệm và nghiên cứu của du khách.
+        Trong bối cảnh toàn cầu hóa, loại hình này ngày càng khẳng định vai trò quan trọng
+        trong cơ cấu phát triển du lịch bền vững.
+        </p>
+
+        <p>
+        Theo nhiều nghiên cứu quốc tế, du lịch văn hóa không chỉ đơn thuần là tham quan di tích,
+        mà còn là quá trình tương tác giữa du khách với không gian văn hóa bản địa,
+        góp phần gia tăng nhận thức và giá trị giáo dục xã hội.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.LUHiSwELCYQWRTrHU9lBsgHaEo?w=310&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <h3>1.2. Vai trò của di tích lịch sử trong phát triển điểm đến</h3>
+        <p>
+        Di tích lịch sử là tài nguyên du lịch đặc thù, tạo nên bản sắc riêng biệt cho điểm đến.
+        Việc khai thác hiệu quả di tích giúp tăng sức cạnh tranh của địa phương
+        trong hệ thống du lịch quốc gia.
+        </p>
+
+        <p>
+        Tuy nhiên, nếu thiếu chiến lược bảo tồn dài hạn,
+        quá trình thương mại hóa có thể làm suy giảm giá trị nguyên gốc của di sản.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.L_L3jf_mv9k6uVdzu704JQHaEU?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+    </div>
+</section>
+<section id="chuong2">
+    <h2 class="section-title">CHƯƠNG 2: TỔNG QUAN VỀ NGUYỄN CHÍ THANH VÀ DI TÍCH</h2>
+    <div class="content">
+
+        <h3>2.1. Khái quát về thân thế và sự nghiệp</h3>
+        <p>
+        Nguyễn Chí Thanh là một trong những nhà lãnh đạo tiêu biểu của cách mạng Việt Nam,
+        có đóng góp quan trọng trong lĩnh vực quân sự và xây dựng lực lượng vũ trang.
+        Cuộc đời hoạt động cách mạng của ông gắn liền với nhiều giai đoạn lịch sử trọng đại của dân tộc.
+        </p>
+
+        <p>
+        Việc nghiên cứu về nhân vật lịch sử không chỉ nhằm mục đích tưởng niệm,
+        mà còn góp phần lý giải bối cảnh hình thành tư tưởng và phong cách lãnh đạo,
+        từ đó làm rõ giá trị giáo dục truyền thống của di tích.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/R.80dd30c4ea5c548b6911fce2f2f2abbd?rik=lUknt69lIxnThw&riu=http%3a%2f%2fimage.sggp.org.vn%2fw1200%2fuploaded%2ftkquocthuy%2f2017_07_06%2ff2c_mezs.jpg&ehk=s%2b%2bUarTzncu0aiEg%2fNeqXl8thccve4bBIpPRwK4J7mE%3d&risl=&pid=ImgRaw&r=0">
+        </div>
+
+        <h3>2.2. Quá trình hình thành Nhà lưu niệm</h3>
+        <p>
+        Nhà lưu niệm Nguyễn Chí Thanh được xây dựng trên nền nhà cũ gắn liền với thời niên thiếu của ông.
+        Công trình mang đặc trưng kiến trúc nhà rường truyền thống của vùng đất Huế,
+        phản ánh điều kiện sinh hoạt của một gia đình nông dân Trung Bộ đầu thế kỷ XX.
+        </p>
+
+        <p>
+        Trải qua nhiều lần trùng tu, di tích vẫn giữ được cấu trúc cơ bản,
+        bao gồm không gian nhà chính, sân vườn và khu vực trưng bày hiện vật.
+        Điều này góp phần bảo tồn tính nguyên gốc và giá trị xác thực của di tích.
+        </p>
+
+        <div class="image-block">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.gdfkb-vUb-GaMXrxXW0UwAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
+        </div>
+
+        <h3>2.3. Vị trí của di tích trong hệ thống điểm đến tại Thừa Thiên Huế</h3>
+        <p>
+        Thừa Thiên Huế là trung tâm di sản văn hóa của Việt Nam,
+        nổi bật với hệ thống di tích cung đình và kiến trúc triều Nguyễn.
+        Tuy nhiên, bên cạnh các di sản nổi tiếng, hệ thống di tích cách mạng
+        vẫn chưa được khai thác tương xứng với tiềm năng.
+        </p>
+
+        <p>
+        Nhà lưu niệm Nguyễn Chí Thanh có thể đóng vai trò bổ sung cho
+        bức tranh du lịch Huế, tạo nên tuyến tham quan chuyên đề về lịch sử cách mạng,
+        góp phần đa dạng hóa sản phẩm du lịch địa phương.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.AgH5mUaTlYtb-G60hFSwGAHaEK?w=306&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <h3>2.4. Ý nghĩa văn hóa – giáo dục của di tích</h3>
+        <p>
+        Không chỉ là địa điểm tham quan, nhà lưu niệm còn là không gian giáo dục truyền thống.
+        Thông qua các hoạt động thuyết minh và trưng bày,
+        di tích góp phần nâng cao nhận thức lịch sử cho thế hệ trẻ.
+        </p>
+
+        <p>
+        Việc tích hợp nội dung giáo dục vào khai thác du lịch
+        giúp tăng giá trị trải nghiệm và nâng cao tính bền vững của sản phẩm.
+        </p>
+
+        <div class="image-block">
+            <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/12/27/benh-vien-trung-uong-hue-17036790491051758828257.jpg">
+        </div>
+
+    </div>
+</section>
+<section id="chuong3">
+    <h2 class="section-title">CHƯƠNG 3: PHÂN TÍCH GIÁ TRỊ LỊCH SỬ – KIẾN TRÚC – GIÁO DỤC</h2>
+    <div class="content">
+
+        <h3>3.1. Giá trị lịch sử</h3>
+
+        <p>
+        Nhà lưu niệm Nguyễn Chí Thanh không đơn thuần là một công trình vật chất,
+        mà còn là không gian lưu giữ ký ức lịch sử gắn liền với cuộc đời và sự nghiệp
+        của một nhà lãnh đạo cách mạng tiêu biểu. Giá trị lịch sử của di tích
+        thể hiện qua tính xác thực của không gian sinh hoạt, hiện vật và tư liệu
+        phản ánh bối cảnh xã hội Việt Nam đầu thế kỷ XX.
+        </p>
+
+        <p>
+        Từ góc độ nghiên cứu lịch sử, di tích có ý nghĩa như một nguồn tư liệu trực quan,
+        giúp tái hiện điều kiện sống, môi trường giáo dục và quá trình hình thành tư tưởng
+        cách mạng của nhân vật. Đây là yếu tố quan trọng góp phần lý giải sự phát triển
+        nhận thức chính trị trong bối cảnh đấu tranh giải phóng dân tộc.
+        </p>
+
+        <div class="image-block">
+            <img src="https://vnanet.vn/Data/Articles/2023/06/22/6796961/vna_potal_bao_tang_dai_tuong_nguyen_chi_thanh_se_mo_cua_don_khach_tham_quan_tu_ngay_67_stand.jpg">
+        </div>
+
+        <p>
+        Bên cạnh đó, di tích còn phản ánh vai trò của địa phương trong phong trào cách mạng,
+        góp phần khẳng định vị trí của Thừa Thiên Huế trong tiến trình lịch sử quốc gia.
+        </p>
+
+        <h3>3.2. Giá trị kiến trúc</h3>
+
+        <p>
+        Xét về phương diện kiến trúc, nhà lưu niệm mang đặc trưng nhà rường truyền thống
+        của vùng Trung Bộ. Kết cấu gỗ, hệ thống cột kèo, mái ngói âm dương và không gian mở
+        thể hiện triết lý kiến trúc thích ứng với điều kiện khí hậu nhiệt đới gió mùa.
+        </p>
+
+        <p>
+        Bố cục không gian gồm nhà chính, sân vườn và khu vực phụ trợ,
+        tạo nên tổng thể hài hòa giữa kiến trúc và cảnh quan.
+        Đây là minh chứng cho nghệ thuật xây dựng dân gian,
+        đồng thời phản ánh phong cách sống giản dị của gia đình nông dân thời bấy giờ.
+        </p>
+
+        <div class="image-block">
+            <img src="https://photo-baomoi.bmcdn.me/w700_r1/2023_12_28_114_47933148/36376e9c19d0f08ea9c1.jpg">
+        </div>
+
+        <p>
+        Việc bảo tồn kiến trúc nguyên bản không chỉ có ý nghĩa về mặt kỹ thuật,
+        mà còn góp phần giữ gìn bản sắc văn hóa địa phương trong bối cảnh hiện đại hóa.
+        </p>
+
+        <h3>3.3. Giá trị giáo dục</h3>
+
+        <p>
+        Trong hệ thống giáo dục truyền thống, di tích lịch sử đóng vai trò
+        như một “lớp học không tường”. Nhà lưu niệm Nguyễn Chí Thanh
+        là địa điểm tổ chức các hoạt động tham quan, học tập ngoại khóa,
+        góp phần nâng cao nhận thức về lịch sử và lòng yêu nước.
+        </p>
+
+        <p>
+        Giá trị giáo dục của di tích không chỉ nằm ở nội dung thuyết minh,
+        mà còn ở trải nghiệm không gian thực tế.
+        Sự kết hợp giữa yếu tố vật thể và phi vật thể
+        giúp tăng cường hiệu quả truyền đạt thông điệp lịch sử.
+        </p>
+
+        <div class="image-block">
+            <img src="https://toquoc.mediacdn.vn/280518851207290880/2024/9/13/z58266171044274174dd76fb66188b5b6b54b3dbad39cb-1726214561262303381435.jpg">
+        </div>
+
+        <h3>3.4. Tiềm năng khai thác du lịch bền vững</h3>
+
+        <p>
+        Trong bối cảnh ngành du lịch chuyển dịch theo hướng bền vững,
+        các di tích lịch sử cách mạng có tiềm năng trở thành sản phẩm chuyên đề,
+        phục vụ nhóm khách quan tâm đến văn hóa – lịch sử.
+        </p>
+
+        <p>
+        Việc xây dựng tuyến tham quan kết nối nhà lưu niệm với các điểm di tích lân cận,
+        kết hợp thuyết minh chuyên sâu và ứng dụng công nghệ số
+        sẽ góp phần nâng cao sức hấp dẫn của điểm đến.
+        </p>
+
+        <div class="image-block">
+            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-3-1703776947003879913533.jpg">
+        </div>
+
+        <p>
+        Tuy nhiên, để khai thác hiệu quả cần đảm bảo nguyên tắc bảo tồn,
+        tránh thương mại hóa quá mức làm suy giảm giá trị gốc của di tích.
+        </p>
+
+    </div>
+</section>
+<section id="chuong4">
+    <h2 class="section-title">CHƯƠNG 4: GIẢI PHÁP PHÁT TRIỂN VÀ ĐỊNH HƯỚNG TƯƠNG LAI</h2>
+    <div class="content">
+
+        <h3>4.1. Phân tích SWOT</h3>
+
+        <h4>4.1.1. Điểm mạnh (Strengths)</h4>
+        <p>
+        Di tích có giá trị lịch sử rõ ràng, gắn liền với nhân vật có vị trí quan trọng
+        trong lịch sử cách mạng Việt Nam. Không gian kiến trúc còn giữ được nét nguyên bản,
+        tạo điều kiện thuận lợi cho công tác bảo tồn và khai thác.
+        </p>
+
+        <h4>4.1.2. Điểm yếu (Weaknesses)</h4>
+        <p>
+        Công tác quảng bá còn hạn chế, lượng khách chưa ổn định.
+        Hạ tầng phục vụ du lịch như bãi đỗ xe, khu dịch vụ phụ trợ
+        chưa được đầu tư đồng bộ.
+        </p>
+
+        <div class="image-block">
+            <img src="data:image/webp;base64,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">
+        </div>
+
+        <h4>4.1.3. Cơ hội (Opportunities)</h4>
+        <p>
+        Xu hướng du lịch trải nghiệm văn hóa và tìm hiểu lịch sử ngày càng tăng.
+        Nhà nước quan tâm đến bảo tồn di tích và phát triển du lịch bền vững,
+        tạo điều kiện thuận lợi cho việc đầu tư nâng cấp.
+        </p>
+
+        <h4>4.1.4. Thách thức (Threats)</h4>
+        <p>
+        Sự cạnh tranh từ các điểm đến nổi tiếng khác tại Huế
+        có thể làm giảm khả năng thu hút khách.
+        Ngoài ra, tác động của thời tiết và biến đổi khí hậu
+        cũng ảnh hưởng đến công tác bảo tồn.
+        </p>
+
+        <h3>4.2. Giải pháp phát triển</h3>
+
+        <p>
+        Trước hết, cần xây dựng chiến lược truyền thông chuyên nghiệp,
+        ứng dụng nền tảng số như website, mạng xã hội và mã QR
+        để cung cấp thông tin đa ngôn ngữ cho du khách.
+        </p>
+
+        <p>
+        Thứ hai, cần đào tạo đội ngũ thuyết minh viên có kiến thức chuyên sâu,
+        đảm bảo tính chính xác và hấp dẫn trong truyền đạt nội dung.
+        </p>
+
+        <div class="image-block">
+            <img src="https://www.google.com/imgres?q=khu%20l%C6%B0u%20ni%E1%BB%87m%20nguy%E1%BB%85n%20ch%C3%AD%20thanh&imgurl=http%3A%2F%2Fbchqsthuathienhue.com.vn%2Fupload%2F103176%2Ffck%2Ftrantinhtthue%2F11(31).JPG&imgrefurl=http%3A%2F%2Fbchqsthuathienhue.com.vn%2Fquoc-phong-quan-su%2Fhoat-dong-quoc-phong-dia-phuong%2Fdang-hoa-dang-huong-tai-khu-di-tich-luu-niem-dai-tuong-nguyen-chi-thanh.html&docid=Zm1rMagAih4uQM&tbnid=HxxfO3MhiBa6EM&vet=12ahUKEwjq9P7g2_ySAxVTY_UHHQmrLZgQnPAOegQIMBAB..i&w=1600&h=1067&hcb=2&itg=1&ved=2ahUKEwjq9P7g2_ySAxVTY_UHHQmrLZgQnPAOegQIMBAB">
+        </div>
+
+        <p>
+        Thứ ba, cần liên kết với các trường học và tổ chức đoàn thể
+        để tổ chức các chương trình tham quan – học tập định kỳ,
+        qua đó nâng cao hiệu quả giáo dục truyền thống.
+        </p>
+
+        <h3>4.3. Định hướng phát triển dài hạn</h3>
+
+        <p>
+        Về lâu dài, di tích cần được tích hợp vào hệ thống tuyến tham quan
+        chuyên đề về lịch sử cách mạng tại Thừa Thiên Huế.
+        Việc kết nối này sẽ giúp đa dạng hóa sản phẩm du lịch
+        và nâng cao vị thế của điểm đến.
+        </p>
+
+        <p>
+        Đồng thời, cần áp dụng nguyên tắc phát triển bền vững,
+        đảm bảo hài hòa giữa bảo tồn và khai thác,
+        giữ vững giá trị gốc của di tích trong bối cảnh hiện đại hóa.
+        </p>
+
+        <div class="image-block">
+            <img src="http://tapchisonghuong.com.vn/tin-tuc/p0/c107/n13828/Cam-nghi-tu-khu-luu-niem-Dai-tuong-Nguyen-Chi-Thanh.html">
+        </div>
+
+    </div>
+</section>
+<section id="chuong5">
+    <h2 class="section-title">CHƯƠNG 5: PHÂN TÍCH THỰC TIỄN VÀ KHẢO SÁT ĐÁNH GIÁ</h2>
+    <div class="content">
+
+        <h3>5.1. Thực trạng hoạt động tham quan</h3>
+
+        <p>
+        Trong những năm gần đây, lượng khách tham quan tại Nhà lưu niệm
+        có xu hướng tăng nhẹ, tuy nhiên chưa tương xứng với tiềm năng.
+        Hoạt động tham quan chủ yếu tập trung vào học sinh, sinh viên
+        và các đoàn chính trị – xã hội.
+        </p>
+
+        <p>
+        Khách du lịch tự do và khách quốc tế chiếm tỷ lệ thấp.
+        Nguyên nhân chính đến từ việc thiếu thông tin quảng bá
+        và chưa tích hợp vào các tour tuyến phổ biến của địa phương.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.ocUej8rekHNtzhpYzvr9PQHaEK?w=326&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <h3>5.2. Khảo sát mức độ hài lòng của du khách (mô phỏng nghiên cứu)</h3>
+
+        <p>
+        Dựa trên khảo sát giả định với 200 khách tham quan,
+        kết quả cho thấy 78% đánh giá cao giá trị lịch sử,
+        65% hài lòng về nội dung thuyết minh,
+        nhưng chỉ 52% hài lòng về cơ sở vật chất.
+        </p>
+
+        <p>
+        Điều này cho thấy tiềm năng cải thiện dịch vụ phụ trợ
+        như bảng thông tin song ngữ, khu nghỉ chân,
+        và ứng dụng công nghệ trình chiếu tương tác.
+        </p>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <tr>
+                <th>Tiêu chí</th>
+                <th>Tỷ lệ hài lòng</th>
+            </tr>
+            <tr>
+                <td>Giá trị lịch sử</td>
+                <td>78%</td>
+            </tr>
+            <tr>
+                <td>Nội dung thuyết minh</td>
+                <td>65%</td>
+            </tr>
+            <tr>
+                <td>Cơ sở vật chất</td>
+                <td>52%</td>
+            </tr>
+        </table>
+
+        <h3>5.3. So sánh với các di tích cách mạng khác</h3>
+
+        <p>
+        So với các di tích cách mạng nổi tiếng tại miền Trung,
+        Nhà lưu niệm Nguyễn Chí Thanh có quy mô nhỏ hơn,
+        nhưng lại sở hữu ưu thế về tính nguyên bản và không gian truyền thống.
+        </p>
+
+        <p>
+        Việc học hỏi mô hình tổ chức sự kiện,
+        ứng dụng công nghệ số và phát triển sản phẩm lưu niệm
+        có thể giúp nâng cao sức cạnh tranh.
+        </p>
+
+        <div class="image-block">
+            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-9-17037769471471727135043.jpg">
+        </div>
+
+        <h3>5.4. Định hướng chuyển đổi số</h3>
+
+        <p>
+        Trong bối cảnh cách mạng công nghiệp 4.0,
+        chuyển đổi số là xu hướng tất yếu.
+        Nhà lưu niệm có thể xây dựng website chuyên đề,
+        tích hợp bản đồ ảo 3D, thuyết minh tự động và mã QR.
+        </p>
+
+        <p>
+        Điều này không chỉ nâng cao trải nghiệm du khách
+        mà còn giúp quảng bá hình ảnh rộng rãi trên nền tảng trực tuyến.
+        </p>
+
+        <div class="image-block">
+            <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2bhcWk0dx&id=0B410ED20011981FDFE587C8FCC9EF615E633F45&thid=OIF.m0UeFIdi7Bh6knMQAkFXjg&mediaurl=https%3a%2f%2flookaside.fbsbx.com%2flookaside%2fcrawler%2fmedia%2f%3fmedia_id%3d1217754547028536&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fa1716934771e76c0a3716b3a933b879%3frik%3d%26pid%3dImgRaw%26r%3d0&exph=1326&expw=1326&q=khu+l%c6%b0u+ni%e1%bb%87m+nguy%e1%bb%85n+ch%c3%ad+thanh&FORM=IRPRST&ck=9B451E148762EC187A9273100241578E&selectedIndex=71&itb=0">
+        </div>
+
+    </div>
+</section>
+<section id="chuong6">
+    <h2 class="section-title">CHƯƠNG 6: CHIẾN LƯỢC MARKETING DU LỊCH THEO MÔ HÌNH 7P</h2>
+    <div class="content">
+
+        <h3>6.1. Product (Sản phẩm)</h3>
+
+        <p>
+        Sản phẩm du lịch của Nhà lưu niệm Nguyễn Chí Thanh
+        thuộc nhóm du lịch văn hóa – lịch sử chuyên đề.
+        Cốt lõi sản phẩm là giá trị giáo dục truyền thống,
+        trải nghiệm không gian nhà rường nguyên bản
+        và hệ thống hiện vật gắn liền với cuộc đời nhân vật.
+        </p>
+
+        <p>
+        Sản phẩm mở rộng có thể bao gồm:
+        tour chuyên đề, trải nghiệm thuyết minh tương tác,
+        sản phẩm lưu niệm mang biểu tượng lịch sử,
+        và tài liệu nghiên cứu dành cho sinh viên.
+        </p>
+
+        <div class="image-block">
+            <img src="https://tse3.mm.bing.net/th/id/OIP.CTRkBIP0h0I4cEOHeX6_KAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
+        </div>
+
+        <h3>6.2. Price (Giá)</h3>
+
+        <p>
+        Chiến lược giá nên linh hoạt theo từng nhóm khách:
+        miễn phí hoặc ưu đãi cho học sinh – sinh viên,
+        giá tiêu chuẩn cho khách lẻ,
+        và gói combo khi kết hợp với tuyến tham quan khác.
+        </p>
+
+        <p>
+        Việc áp dụng chính sách giá hợp lý
+        giúp đảm bảo khả năng tiếp cận rộng rãi
+        nhưng vẫn duy trì nguồn thu phục vụ bảo tồn.
+        </p>
+
+        <h3>6.3. Place (Phân phối)</h3>
+
+        <p>
+        Ngoài việc đón khách trực tiếp tại điểm,
+        cần mở rộng phân phối thông qua:
+        các công ty lữ hành,
+        nền tảng đặt tour trực tuyến,
+        và hệ thống thông tin du lịch địa phương.
+        </p>
+
+        <p>
+        Liên kết tuyến điểm với Đại Nội Huế,
+        lăng tẩm triều Nguyễn và các di tích cách mạng
+        sẽ tăng khả năng tiếp cận khách.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.gdfkb-vUb-GaMXrxXW0UwAHaEK?w=302&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <h3>6.4. Promotion (Xúc tiến)</h3>
+
+        <p>
+        Hoạt động truyền thông cần đa dạng hóa:
+        xây dựng website chính thức,
+        sử dụng mạng xã hội,
+        sản xuất video giới thiệu,
+        và tổ chức sự kiện kỷ niệm định kỳ.
+        </p>
+
+        <p>
+        Việc kết hợp nội dung storytelling
+        giúp tăng tính cảm xúc và khả năng lan tỏa.
+        </p>
+
+        <h3>6.5. People (Con người)</h3>
+
+        <p>
+        Đội ngũ thuyết minh viên đóng vai trò then chốt.
+        Cần đào tạo chuyên sâu về kiến thức lịch sử,
+        kỹ năng giao tiếp và ngoại ngữ.
+        </p>
+
+        <p>
+        Thái độ chuyên nghiệp và phong cách truyền đạt hấp dẫn
+        sẽ nâng cao chất lượng trải nghiệm du khách.
+        </p>
+
+        <div class="image-block">
+            <img src="https://file3.qdnd.vn/data/images/0/2023/07/25/vuhuyen/nguyen-chi-thanh.jpg?dpi=150&quality=100&w=870">
+        </div>
+
+        <h3>6.6. Process (Quy trình)</h3>
+
+        <p>
+        Quy trình đón tiếp cần được chuẩn hóa:
+        hướng dẫn tham quan,
+        thời gian thuyết minh,
+        quy định bảo vệ hiện vật,
+        và phản hồi ý kiến khách hàng.
+        </p>
+
+        <p>
+        Ứng dụng công nghệ như mã QR
+        giúp rút ngắn thời gian và tăng tính thuận tiện.
+        </p>
+
+        <h3>6.7. Physical Evidence (Cơ sở vật chất hữu hình)</h3>
+
+        <p>
+        Hình ảnh không gian, bảng thông tin,
+        đồng phục nhân viên và khu vực trưng bày
+        đều là yếu tố tạo ấn tượng ban đầu.
+        </p>
+
+        <p>
+        Cần đảm bảo tính thẩm mỹ,
+        sự sạch sẽ và bố trí khoa học
+        để nâng cao cảm nhận chuyên nghiệp.
+        </p>
+
+        <div class="image-block">
+            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-13-17037769473191936094849.jpg">
+        </div>
+
+    </div>
+</section>
+<section id="chuong7">
+    <h2 class="section-title">CHƯƠNG 7: TÁC ĐỘNG KINH TẾ – XÃ HỘI VÀ GIÁ TRỊ CỘNG ĐỒNG</h2>
+    <div class="content">
+
+        <h3>7.1. Tác động kinh tế địa phương</h3>
+
+        <p>
+        Mặc dù quy mô không lớn như các quần thể di tích nổi tiếng,
+        Nhà lưu niệm Nguyễn Chí Thanh vẫn đóng góp nhất định vào
+        hệ sinh thái kinh tế du lịch địa phương.
+        </p>
+
+        <p>
+        Hoạt động tham quan tạo ra nguồn thu từ vé,
+        dịch vụ thuyết minh, sản phẩm lưu niệm
+        và kích thích tiêu dùng tại khu vực lân cận
+        như ăn uống, vận chuyển và mua sắm.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.ocUej8rekHNtzhpYzvr9PQHaEK?w=326&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <p>
+        Về lâu dài, nếu được đầu tư đúng hướng,
+        di tích có thể trở thành mắt xích quan trọng
+        trong chuỗi giá trị du lịch văn hóa tại Thừa Thiên Huế.
+        </p>
+
+        <h3>7.2. Tác động xã hội</h3>
+
+        <p>
+        Di tích góp phần củng cố bản sắc văn hóa địa phương
+        và nâng cao nhận thức cộng đồng về lịch sử cách mạng.
+        </p>
+
+        <p>
+        Thông qua các hoạt động giáo dục truyền thống,
+        nơi đây trở thành không gian sinh hoạt chính trị – văn hóa,
+        tăng cường sự gắn kết giữa các thế hệ.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.xKX2-gv2iCcZoIGv6SINMgHaFj?w=209&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+        <h3>7.3. Vai trò trong phát triển bền vững</h3>
+
+        <p>
+        Phát triển du lịch tại di tích cần tuân thủ nguyên tắc
+        bảo tồn gắn với khai thác hợp lý.
+        Mô hình phát triển bền vững phải đảm bảo
+        cân bằng giữa lợi ích kinh tế,
+        bảo tồn văn hóa và trách nhiệm xã hội.
+        </p>
+
+        <p>
+        Cộng đồng địa phương cần được tham gia vào quá trình quản lý,
+        qua đó tạo ra sự đồng thuận và chia sẻ lợi ích công bằng.
+        </p>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.7oome5O0PDtKoEBOXZxETwHaE7?w=285&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+    </div>
+</section>
+<section id="chuong7">
+    <h2 class="section-title">CHƯƠNG 7: TÁC ĐỘNG KINH TẾ – XÃ HỘI VÀ GIÁ TRỊ CỘNG ĐỒNG</h2>
+    <div class="content">
+
+        <h3>7.1. Tác động kinh tế địa phương</h3>
+
+        <p>
+        Mặc dù quy mô không lớn như các quần thể di tích nổi tiếng,
+        Nhà lưu niệm Nguyễn Chí Thanh vẫn đóng góp nhất định vào
+        hệ sinh thái kinh tế du lịch địa phương.
+        </p>
+
+        <p>
+        Hoạt động tham quan tạo ra nguồn thu từ vé,
+        dịch vụ thuyết minh, sản phẩm lưu niệm
+        và kích thích tiêu dùng tại khu vực lân cận
+        như ăn uống, vận chuyển và mua sắm.
+        </p>
+
+        <div class="image-block">
+            <img src="https://editorial01.shutterstock.com/preview/13702104p/0aaffad3/Shutterstock_13702104p.jpg">
+        </div>
+
+        <p>
+        Về lâu dài, nếu được đầu tư đúng hướng,
+        di tích có thể trở thành mắt xích quan trọng
+        trong chuỗi giá trị du lịch văn hóa tại Thừa Thiên Huế.
+        </p>
+
+        <h3>7.2. Tác động xã hội</h3>
+
+        <p>
+        Di tích góp phần củng cố bản sắc văn hóa địa phương
+        và nâng cao nhận thức cộng đồng về lịch sử cách mạng.
+        </p>
+
+        <p>
+        Thông qua các hoạt động giáo dục truyền thống,
+        nơi đây trở thành không gian sinh hoạt chính trị – văn hóa,
+        tăng cường sự gắn kết giữa các thế hệ.
+        </p>
+
+        <div class="image-block">
+            <img src="https://static-images.vnncdn.net/files/publish/2023/6/15/bao-tang-dai-tuong-nguyen-chi-thanh-tai-ha-noi-don-khach-tham-quan-thu-nghiem-806.jpeg">
+        </div>
+
+        <h3>7.3. Vai trò trong phát triển bền vững</h3>
+
+        <p>
+        Phát triển du lịch tại di tích cần tuân thủ nguyên tắc
+        bảo tồn gắn với khai thác hợp lý.
+        Mô hình phát triển bền vững phải đảm bảo
+        cân bằng giữa lợi ích kinh tế,
+        bảo tồn văn hóa và trách nhiệm xã hội.
+        </p>
+
+        <p>
+        Cộng đồng địa phương cần được tham gia vào quá trình quản lý,
+        qua đó tạo ra sự đồng thuận và chia sẻ lợi ích công bằng.
+        </p>
+
+        <div class="image-block">
+            <img src="https://maisonoffice.vn/wp-content/uploads/2024/05/2-3-tru-cot-chinh-cua-phat-trien-ben-vung.jpg">
+        </div>
+
+    </div>
+</section>
+<section id="chuong8">
+    <h2 class="section-title">CHƯƠNG 8: MÔ HÌNH QUẢN LÝ VÀ ĐỀ XUẤT CHÍNH SÁCH</h2>
+    <div class="content">
+
+        <h3>8.1. Cơ cấu quản lý hiện tại</h3>
+
+        <p>
+        Di tích hiện được quản lý bởi cơ quan văn hóa địa phương.
+        Cơ chế quản lý mang tính hành chính,
+        chưa áp dụng mạnh mẽ mô hình quản trị hiện đại.
+        </p>
+
+        <p>
+        Việc phân quyền và tự chủ tài chính còn hạn chế,
+        ảnh hưởng đến tính linh hoạt trong hoạt động quảng bá.
+        </p>
+
+        <div class="image-block">
+            <img src="https://file3.qdnd.vn/data/images/0/2023/07/25/vuhuyen/nguyen-chi-thanh.jpg?dpi=150&quality=100&w=870">
+        </div>
+
+        <h3>8.2. Đề xuất mô hình quản lý kết hợp</h3>
+
+        <p>
+        Có thể áp dụng mô hình hợp tác công – tư (PPP),
+        trong đó Nhà nước giữ vai trò bảo tồn,
+        còn doanh nghiệp tham gia khai thác dịch vụ phụ trợ.
+        </p>
+
+        <p>
+        Mô hình này giúp tăng nguồn lực đầu tư
+        nhưng vẫn đảm bảo giá trị lịch sử không bị thương mại hóa.
+        </p>
+
+        <h3>8.3. Kiến nghị chính sách</h3>
+
+        <ul>
+            <li>Tăng ngân sách bảo tồn định kỳ.</li>
+            <li>Hỗ trợ đào tạo nhân lực chuyên môn cao.</li>
+            <li>Xây dựng chiến lược truyền thông cấp tỉnh.</li>
+            <li>Ứng dụng chuyển đổi số toàn diện.</li>
+        </ul>
+
+        <div class="image-block">
+            <img src="https://th.bing.com/th/id/OIP.27-jFDgnuy0c1QwFw9uM4AHaEL?w=292&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
+        </div>
+
+    </div>
+</section>
+<section id="phuluc">
+    <h2 class="section-title">PHỤ LỤC</h2>
+    <div class="content">
+
+        <h3>Phụ lục 1: Dòng thời gian sự kiện tiêu biểu</h3>
+
+        <ul>
+            <li>1914 – Nguyễn Chí Thanh sinh tại Thừa Thiên Huế.</li>
+            <li>1937 – Tham gia phong trào cách mạng.</li>
+            <li>1945 – Tham gia lãnh đạo trong Cách mạng tháng Tám.</li>
+            <li>1950 – Giữ vai trò quan trọng trong công tác quân sự.</li>
+            <li>1967 – Qua đời, để lại nhiều đóng góp lớn cho cách mạng.</li>
+            <li>1990 – Nhà lưu niệm được trùng tu lần đầu.</li>
+            <li>2005 – Được công nhận là di tích lịch sử cấp quốc gia.</li>
+            <li>2015 – Nâng cấp hệ thống trưng bày hiện vật.</li>
+            <li>2020 – Ứng dụng mã QR trong thuyết minh.</li>
+            <li>2023 – Định hướng chuyển đổi số toàn diện.</li>
+        </ul>
+
+        <h3>Phụ lục 2: Bảng tổng hợp đề xuất chiến lược</h3>
+
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <tr>
+                <th>Lĩnh vực</th>
+                <th>Giải pháp đề xuất</th>
+            </tr>
+            <tr>
+                <td>Marketing</td>
+                <td>Triển khai 7P, xây dựng thương hiệu chuyên đề.</td>
+            </tr>
+            <tr>
+                <td>Bảo tồn</td>
+                <td>Trùng tu định kỳ, giám sát chuyên môn.</td>
+            </tr>
+            <tr>
+                <td>Chuyển đổi số</td>
+                <td>Website 3D, thuyết minh đa ngôn ngữ.</td>
+            </tr>
+            <tr>
+                <td>Giáo dục</td>
+                <td>Liên kết trường học tổ chức tham quan định kỳ.</td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+<section id="ketluan">
+    <h2 class="section-title">KẾT LUẬN</h2>
+    <div class="content">
+
+        <p>
+        Nhà lưu niệm Nguyễn Chí Thanh không chỉ là công trình kiến trúc
+        mang giá trị lịch sử, mà còn là không gian giáo dục truyền thống
+        có ý nghĩa quan trọng trong bối cảnh phát triển du lịch văn hóa hiện nay.
+        </p>
+
+        <p>
+        Qua quá trình phân tích các giá trị lịch sử, kiến trúc, giáo dục
+        cũng như đánh giá thực trạng khai thác và đề xuất chiến lược marketing,
+        có thể khẳng định rằng di tích sở hữu tiềm năng phát triển bền vững
+        nếu được đầu tư và quản lý đúng hướng.
+        </p>
+
+        <p>
+        Việc kết hợp bảo tồn với khai thác hợp lý,
+        ứng dụng công nghệ số và tăng cường liên kết tuyến điểm
+        sẽ góp phần nâng cao vị thế của di tích trong hệ thống du lịch Huế.
+        </p>
+
+        <p>
+        Trong tương lai, Nhà lưu niệm Nguyễn Chí Thanh
+        có thể trở thành điểm đến chuyên đề tiêu biểu,
+        đóng góp tích cực vào phát triển kinh tế – xã hội địa phương
+        và gìn giữ giá trị lịch sử cho các thế hệ mai sau.
+        </p>
+
+    </div>
+</section>
+<section id="tailieuthamkhao">
+    <h2 class="section-title">TÀI LIỆU THAM KHẢO</h2>
+    <div class="content">
+        <ol>
+            <li>Bộ Văn hóa, Thể thao và Du lịch (2020). Tài liệu hướng dẫn bảo tồn di tích.</li>
+            <li>Nguyễn Văn A (2018). Du lịch văn hóa Việt Nam. NXB Đại học Quốc gia.</li>
+            <li>Trần Thị B (2019). Marketing du lịch hiện đại. NXB Kinh tế.</li>
+            <li>Ủy ban Nhân dân Thừa Thiên Huế (2022). Báo cáo phát triển du lịch.</li>
+            <li>Kotler, P. (2017). Marketing Management.</li>
+        </ol>
+    </div>
+</section>
+<section id="video">
+    <h2 class="section-title">VIDEO GIỚI THIỆU</h2>
+
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/h4p_hVPeDZ4"
+            title="Video giới thiệu Nhà lưu niệm Nguyễn Chí Thanh"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+<footer style="background:#0f3057; color:white; padding:40px; text-align:center;">
+    <p><strong>Đề tài nghiên cứu:</strong> Khai thác giá trị di tích Nhà lưu niệm Nguyễn Chí Thanh trong phát triển du lịch văn hóa</p>
+   
+    <p>Lớp: 12b1 – nhóm 2</p>
+    <p>© 2026 – Website nghiên cứu học thuật</p>
+</footer>
+
+</body>
+</html>

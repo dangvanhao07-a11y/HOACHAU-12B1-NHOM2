@@ -1,1084 +1,971 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phát triển du lịch bền vững tại Nhà lưu niệm Nguyễn Chí Thanh</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Khu Lưu Niệm Đại Tướng Nguyễn Chí Thanh</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-/* ===== RESET ===== */
+/* RESET */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Be Vietnam Pro",sans-serif;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(to bottom,#f4f8fb,#e8f1f8);
-    color:#222;
-    line-height:1.8;
+
+background:linear-gradient(180deg,#eaf7ff,#f5fbff,#ffffff);
+
+color:#333;
+
+line-height:1.8;
+
 }
 
-/* ===== HEADER ===== */
+/* CONTAINER */
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:0 20px;
+
+}
+
+/* NAVBAR */
+
 header{
-    background:linear-gradient(135deg,#0f3057,#00587a,#008891);
-    color:white;
-    padding:60px 20px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+z-index:1000;
+
+background:rgba(255,255,255,0.35);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,0.6);
+
+transition:0.3s;
+
 }
 
-header h1{
-    font-family:'Playfair Display',serif;
-    font-size:36px;
-    margin-bottom:15px;
-    letter-spacing:1px;
+.navbar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+height:70px;
+
 }
 
-header p{
-    font-size:18px;
-    opacity:0.9;
+.logo{
+
+font-size:20px;
+
+font-weight:600;
+
+color:#0a6fa5;
+
 }
 
-/* ===== MAIN LAYOUT ===== */
-.container-main{
-    display:flex;
-    max-width:1400px;
-    margin:auto;
-    padding:50px 20px;
+.nav-links{
+
+list-style:none;
+
+display:flex;
+
+gap:32px;
+
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar{
-    width:280px;
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    height:fit-content;
-    position:sticky;
-    top:140px;
+.nav-links a{
+
+text-decoration:none;
+
+color:#003a59;
+
+font-weight:500;
+
+transition:0.3s;
+
 }
 
-.sidebar h3{
-    font-size:20px;
-    margin-bottom:20px;
-    color:#0f3057;
+.nav-links a:hover{
+
+color:#0096d6;
+
 }
 
-.sidebar ul{
-    list-style:none;
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+color:white;
+
+padding:40px;
+
+background:
+linear-gradient(180deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)),
+url("anh1.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+}
+.hero h1{
+
+font-size:56px;
+
+margin-bottom:20px;
+
 }
 
-.sidebar ul li{
-    margin-bottom:12px;
+.hero p{
+
+font-size:19px;
+
+max-width:750px;
+
+margin:auto;
+
 }
 
-.sidebar ul li a{
-    text-decoration:none;
-    color:#333;
-    font-size:15px;
-    transition:0.3s;
-    position:relative;
-}
+/* SECTION */
 
-.sidebar ul li a:hover{
-    color:#008891;
-    padding-left:6px;
-}
-
-.sidebar ul li a::after{
-    content:"";
-    position:absolute;
-    width:0%;
-    height:2px;
-    left:0;
-    bottom:-4px;
-    background:#008891;
-    transition:0.3s;
-}
-
-.sidebar ul li a:hover::after{
-    width:100%;
-}
-
-/* ===== CONTENT AREA ===== */
-.content-area{
-    flex:1;
-    margin-left:50px;
-}
-
-/* ===== SECTION CARD ===== */
 section{
-    background:white;
-    padding:45px;
-    margin-bottom:45px;
-    border-radius:18px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.06);
-    transition:0.4s;
+
+padding:110px 0;
+
 }
 
-section:hover{
-    transform:translateY(-6px);
-    box-shadow:0 15px 50px rgba(0,0,0,0.12);
-}
-
-/* ===== SECTION TITLE ===== */
 .section-title{
-    font-family:'Playfair Display',serif;
-    font-size:28px;
-    margin-bottom:25px;
-    background:linear-gradient(to right,#0f3057,#008891);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    border-left:6px solid #008891;
-    padding-left:15px;
+
+text-align:center;
+
+font-size:36px;
+
+margin-bottom:60px;
+
+color:#0a6fa5;
+
 }
 
-/* ===== IMAGE BLOCK ===== */
-.image-block{
-    text-align:center;
-    margin:30px 0;
+/* INTRO */
+
+.intro{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:50px;
+
+align-items:center;
+
 }
 
-.image-block img{
-    max-width:100%;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
-    transition:0.4s;
+.intro img{
+
+width:100%;
+
+border-radius:12px;
+
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
+
 }
 
-.image-block img:hover{
-    transform:scale(1.05);
+/* CARD */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
 }
 
-/* ===== TABLE ===== */
-table{
-    width:100%;
-    margin:25px 0;
-    border-collapse:collapse;
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:12px;
+
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+
+transition:0.3s;
+
 }
 
-table th{
-    background:#0f3057;
-    color:white;
-    padding:12px;
+.card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.15);
+
 }
 
-table td{
-    padding:12px;
-    border:1px solid #ddd;
+.card h3{
+
+margin-bottom:15px;
+
+color:#0a6fa5;
+
 }
 
-/* ===== LIST ===== */
-ul li{
-    margin-bottom:8px;
+/* TIMELINE */
+
+.timeline{
+
+max-width:900px;
+
+margin:auto;
+
 }
 
-/* ===== FOOTER ===== */
+.timeline-item{
+
+background:white;
+
+padding:28px;
+
+border-radius:10px;
+
+margin-bottom:25px;
+
+box-shadow:0 12px 25px rgba(0,0,0,0.08);
+
+}
+
+/* VIDEO */
+
+.video{
+
+text-align:center;
+
+}
+
+.video iframe{
+
+width:100%;
+
+max-width:850px;
+
+height:480px;
+
+border-radius:10px;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+
+}
+
+/* GALLERY */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+border-radius:10px;
+
+transition:0.4s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.05);
+
+}
+
+/* FOOTER */
+
 footer{
-    background:linear-gradient(to right,#0f3057,#00587a);
-    color:white;
-    padding:50px;
-    text-align:center;
-    margin-top:60px;
+
+background:#0a6fa5;
+
+color:white;
+
+text-align:center;
+
+padding:40px;
+
+margin-top:60px;
+
 }
 
-/* ===== FADE IN EFFECT ===== */
-.fade-in{
-    opacity:0;
-    transform:translateY(40px);
-    transition: all 0.8s ease;
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:36px;
+
 }
 
-.fade-in.show{
-    opacity:1;
-    transform:translateY(0);
+.intro{
+
+grid-template-columns:1fr;
+
 }
 
-/* ===== SCROLLBAR STYLE ===== */
-::-webkit-scrollbar{
-    width:10px;
+.nav-links{
+
+display:none;
+
 }
 
-::-webkit-scrollbar-track{
-    background:#f1f1f1;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#008891;
-    border-radius:5px;
-}
-
-/* ===== BACK TO TOP BUTTON ===== */
-#topBtn{
-    position:fixed;
-    bottom:30px;
-    right:30px;
-    background:#008891;
-    color:white;
-    border:none;
-    padding:14px 18px;
-    border-radius:50%;
-    font-size:18px;
-    cursor:pointer;
-    display:none;
-    box-shadow:0 8px 20px rgba(0,0,0,0.2);
-    transition:0.3s;
-}
-
-#topBtn:hover{
-    background:#0f3057;
-    transform:scale(1.15);
 }
 
 </style>
+
 </head>
 
 <body>
 
-<nav>
-    <h1>KHU LƯU NIỆM ĐẠI TƯỚNG NGUYỄN CHÍ THANH</h1>
-    <ul>
-        <li><a href="#chuong1">Chương 1</a></li>
-        <li><a href="#chuong2">Chương 2</a></li>
-        <li><a href="#chuong3">Chương 3</a></li>
-        <li><a href="#chuong4">Chương 4</a></li>
-    </ul>
-</nav>
+<header>
 
-<section class="hero">
-    <div>
-        <h2>Phát triển du lịch bền vững tại Nhà lưu niệm Nguyễn Chí Thanh</h2>
-       
-    </div>
+<div class="container navbar">
+
+<div class="logo">
+
+Nguyễn Chí Thanh Memorial
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Trang chủ</a></li>
+
+<li><a href="#gioithieu">Giới thiệu</a></li>
+
+<li><a href="#tieusu">Tiểu sử</a></li>
+
+<li><a href="#khuvuc">Khu vực</a></li>
+
+<li><a href="#video">Video</a></li>
+
+<li><a href="#hinhanh">Hình ảnh</a></li>
+
+</ul>
+
+</div>
+
+</header>
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<h1>
+
+Khu Lưu Niệm Đại Tướng Nguyễn Chí Thanh
+
+</h1>
+
+<p>
+
+Khu lưu niệm Đại tướng Nguyễn Chí Thanh là nơi tưởng niệm và tôn vinh
+cuộc đời, sự nghiệp của Đại tướng Nguyễn Chí Thanh –
+một vị tướng tài ba của Quân đội Nhân dân Việt Nam.
+Nơi đây không chỉ là di tích lịch sử quan trọng mà còn là
+địa chỉ đỏ giáo dục truyền thống cách mạng
+cho các thế hệ hôm nay và mai sau.
+
+</p>
+
+</div>
+
 </section>
 
-<section id="chuong1">
-    <h2 class="section-title">CHƯƠNG 1: CƠ SỞ LÝ LUẬN</h2>
-    <div class="content">
 
-        <h3>1.1. Khái niệm du lịch văn hóa</h3>
-        <p>
-        Du lịch văn hóa là hình thức du lịch dựa trên khai thác các giá trị văn hóa vật thể và phi vật thể
-        nhằm đáp ứng nhu cầu tìm hiểu, trải nghiệm và nghiên cứu của du khách.
-        Trong bối cảnh toàn cầu hóa, loại hình này ngày càng khẳng định vai trò quan trọng
-        trong cơ cấu phát triển du lịch bền vững.
-        </p>
 
-        <p>
-        Theo nhiều nghiên cứu quốc tế, du lịch văn hóa không chỉ đơn thuần là tham quan di tích,
-        mà còn là quá trình tương tác giữa du khách với không gian văn hóa bản địa,
-        góp phần gia tăng nhận thức và giá trị giáo dục xã hội.
-        </p>
+<!-- GIỚI THIỆU -->
 
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.LUHiSwELCYQWRTrHU9lBsgHaEo?w=310&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
+<section id="gioithieu">
 
-        <h3>1.2. Vai trò của di tích lịch sử trong phát triển điểm đến</h3>
-        <p>
-        Di tích lịch sử là tài nguyên du lịch đặc thù, tạo nên bản sắc riêng biệt cho điểm đến.
-        Việc khai thác hiệu quả di tích giúp tăng sức cạnh tranh của địa phương
-        trong hệ thống du lịch quốc gia.
-        </p>
+<div class="container">
 
-        <p>
-        Tuy nhiên, nếu thiếu chiến lược bảo tồn dài hạn,
-        quá trình thương mại hóa có thể làm suy giảm giá trị nguyên gốc của di sản.
-        </p>
+<h2 class="section-title">
 
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.L_L3jf_mv9k6uVdzu704JQHaEU?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
+Giới thiệu Khu Lưu Niệm
 
-    </div>
+</h2>
+
+<div class="intro">
+
+<img src="https://cdn.tcdulichtphcm.vn/upload/1-2024/images/2024-03-22/z5272828916880_673e521d4a609b499c5f8674b0d4a624-1711098579-592-width1430height953.jpg">
+
+
+<div>
+
+<p>
+
+Di tích Khu lưu niệm Đại tướng Nguyễn Chí Thanh
+tọa lạc tại thôn Niêm Phò, xã Quảng Thọ,
+huyện Quảng Điền, tỉnh Thừa Thiên Huế.
+Đây là nơi sinh ra và gắn bó với tuổi thơ
+của Đại tướng Nguyễn Chí Thanh – một nhà lãnh đạo
+quân sự và chính trị xuất sắc của cách mạng Việt Nam.
+
+</p>
+
+<br>
+
+<p>
+
+Khu lưu niệm được xây dựng nhằm tưởng nhớ
+và tri ân những đóng góp to lớn của Đại tướng
+đối với sự nghiệp cách mạng của Đảng
+và dân tộc Việt Nam.
+
+Công trình được thiết kế hài hòa với
+không gian làng quê truyền thống của Huế,
+kết hợp giữa yếu tố lịch sử và cảnh quan thiên nhiên,
+tạo nên một không gian trang nghiêm,
+thanh bình và giàu giá trị văn hóa.
+
+</p>
+
+<br>
+
+<p>
+
+Hiện nay khu lưu niệm lưu giữ nhiều
+hình ảnh, tài liệu, hiện vật quý
+liên quan đến cuộc đời và sự nghiệp
+hoạt động cách mạng của Đại tướng Nguyễn Chí Thanh.
+
+Nơi đây trở thành điểm đến ý nghĩa
+cho du khách, học sinh, sinh viên
+đến tham quan, tìm hiểu lịch sử
+và giáo dục truyền thống yêu nước.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-<section id="chuong2">
-    <h2 class="section-title">CHƯƠNG 2: TỔNG QUAN VỀ NGUYỄN CHÍ THANH VÀ DI TÍCH</h2>
-    <div class="content">
+<!-- TIỂU SỬ -->
 
-        <h3>2.1. Khái quát về thân thế và sự nghiệp</h3>
-        <p>
-        Nguyễn Chí Thanh là một trong những nhà lãnh đạo tiêu biểu của cách mạng Việt Nam,
-        có đóng góp quan trọng trong lĩnh vực quân sự và xây dựng lực lượng vũ trang.
-        Cuộc đời hoạt động cách mạng của ông gắn liền với nhiều giai đoạn lịch sử trọng đại của dân tộc.
-        </p>
+<section id="tieusu">
 
-        <p>
-        Việc nghiên cứu về nhân vật lịch sử không chỉ nhằm mục đích tưởng niệm,
-        mà còn góp phần lý giải bối cảnh hình thành tư tưởng và phong cách lãnh đạo,
-        từ đó làm rõ giá trị giáo dục truyền thống của di tích.
-        </p>
+<div class="container">
 
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/R.80dd30c4ea5c548b6911fce2f2f2abbd?rik=lUknt69lIxnThw&riu=http%3a%2f%2fimage.sggp.org.vn%2fw1200%2fuploaded%2ftkquocthuy%2f2017_07_06%2ff2c_mezs.jpg&ehk=s%2b%2bUarTzncu0aiEg%2fNeqXl8thccve4bBIpPRwK4J7mE%3d&risl=&pid=ImgRaw&r=0">
-        </div>
+<h2 class="section-title">
 
-        <h3>2.2. Quá trình hình thành Nhà lưu niệm</h3>
-        <p>
-        Nhà lưu niệm Nguyễn Chí Thanh được xây dựng trên nền nhà cũ gắn liền với thời niên thiếu của ông.
-        Công trình mang đặc trưng kiến trúc nhà rường truyền thống của vùng đất Huế,
-        phản ánh điều kiện sinh hoạt của một gia đình nông dân Trung Bộ đầu thế kỷ XX.
-        </p>
+Tiểu Sử Đại Tướng Nguyễn Chí Thanh
 
-        <p>
-        Trải qua nhiều lần trùng tu, di tích vẫn giữ được cấu trúc cơ bản,
-        bao gồm không gian nhà chính, sân vườn và khu vực trưng bày hiện vật.
-        Điều này góp phần bảo tồn tính nguyên gốc và giá trị xác thực của di tích.
-        </p>
+</h2>
 
-        <div class="image-block">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.gdfkb-vUb-GaMXrxXW0UwAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3">
-        </div>
+<div class="timeline">
 
-        <h3>2.3. Vị trí của di tích trong hệ thống điểm đến tại Thừa Thiên Huế</h3>
-        <p>
-        Thừa Thiên Huế là trung tâm di sản văn hóa của Việt Nam,
-        nổi bật với hệ thống di tích cung đình và kiến trúc triều Nguyễn.
-        Tuy nhiên, bên cạnh các di sản nổi tiếng, hệ thống di tích cách mạng
-        vẫn chưa được khai thác tương xứng với tiềm năng.
-        </p>
+<div class="timeline-item">
 
-        <p>
-        Nhà lưu niệm Nguyễn Chí Thanh có thể đóng vai trò bổ sung cho
-        bức tranh du lịch Huế, tạo nên tuyến tham quan chuyên đề về lịch sử cách mạng,
-        góp phần đa dạng hóa sản phẩm du lịch địa phương.
-        </p>
+<p>
 
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.AgH5mUaTlYtb-G60hFSwGAHaEK?w=306&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
+Đại tướng Nguyễn Chí Thanh tên thật là <strong>Nguyễn Vịnh</strong>,
+sinh ngày <strong>01 tháng 01 năm 1914</strong>
+tại làng Niêm Phò, xã Quảng Thọ,
+huyện Quảng Điền, tỉnh Thừa Thiên Huế.
 
-        <h3>2.4. Ý nghĩa văn hóa – giáo dục của di tích</h3>
-        <p>
-        Không chỉ là địa điểm tham quan, nhà lưu niệm còn là không gian giáo dục truyền thống.
-        Thông qua các hoạt động thuyết minh và trưng bày,
-        di tích góp phần nâng cao nhận thức lịch sử cho thế hệ trẻ.
-        </p>
+Ông sinh ra trong một gia đình nông dân
+giàu truyền thống yêu nước.
+Ngay từ khi còn trẻ,
+Nguyễn Chí Thanh đã sớm tham gia
+vào các phong trào đấu tranh cách mạng
+chống thực dân và phong kiến.
 
-        <p>
-        Việc tích hợp nội dung giáo dục vào khai thác du lịch
-        giúp tăng giá trị trải nghiệm và nâng cao tính bền vững của sản phẩm.
-        </p>
+</p>
 
-        <div class="image-block">
-            <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2023/12/27/benh-vien-trung-uong-hue-17036790491051758828257.jpg">
-        </div>
+</div>
 
-    </div>
+
+
+<div class="timeline-item">
+
+<p>
+
+Trong quá trình hoạt động cách mạng,
+ông nhanh chóng trở thành một trong những
+cán bộ lãnh đạo tiêu biểu của Đảng.
+
+Tháng <strong>7 năm 1937</strong>,
+ông được kết nạp vào
+<strong>Đảng Cộng sản Đông Dương</strong>.
+
+Từ đó,
+ông tham gia lãnh đạo nhiều phong trào
+đấu tranh cách mạng
+và giữ nhiều trọng trách quan trọng
+trong bộ máy lãnh đạo của Đảng.
+
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<p>
+
+Trong thời kỳ kháng chiến
+và đặc biệt là trong giai đoạn
+chiến tranh Việt Nam,
+Đại tướng Nguyễn Chí Thanh
+giữ nhiều chức vụ quan trọng như:
+
+</p>
+
+<br>
+
+<p>
+
+• Bí thư Trung ương Cục miền Nam
+
+<br>
+
+• Bí thư Quân ủy Miền
+
+<br>
+
+• Chính ủy Quân Giải phóng miền Nam
+
+</p>
+
+<br>
+
+<p>
+
+Trên cương vị lãnh đạo,
+ông trực tiếp chỉ đạo
+nhiều chiến lược quân sự quan trọng,
+đóng góp to lớn vào sự nghiệp
+đấu tranh giải phóng dân tộc
+và thống nhất đất nước.
+
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<p>
+
+Đại tướng Nguyễn Chí Thanh
+từ trần vào ngày <strong>06 tháng 07 năm 1967</strong>.
+Dù ra đi khi sự nghiệp cách mạng
+đang ở giai đoạn quyết liệt,
+nhưng những đóng góp của ông
+đã để lại dấu ấn sâu sắc
+trong lịch sử cách mạng Việt Nam.
+
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<p>
+
+Nhằm ghi nhận những cống hiến to lớn
+đối với sự nghiệp cách mạng,
+năm <strong>2007</strong>
+Đại tướng Nguyễn Chí Thanh
+được truy tặng
+<strong>Huân chương Sao Vàng</strong> –
+phần thưởng cao quý nhất
+của Đảng và Nhà nước Việt Nam.
+
+Đây là sự ghi nhận
+đối với những đóng góp
+xuất sắc của ông
+đối với sự nghiệp cách mạng
+và Quân đội Nhân dân Việt Nam.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-<section id="chuong3">
-    <h2 class="section-title">CHƯƠNG 3: PHÂN TÍCH GIÁ TRỊ LỊCH SỬ – KIẾN TRÚC – GIÁO DỤC</h2>
-    <div class="content">
+<!-- CÁC KHU VỰC TRONG KHU LƯU NIỆM -->
 
-        <h3>3.1. Giá trị lịch sử</h3>
+<section id="khuvuc">
 
-        <p>
-        Nhà lưu niệm Nguyễn Chí Thanh không đơn thuần là một công trình vật chất,
-        mà còn là không gian lưu giữ ký ức lịch sử gắn liền với cuộc đời và sự nghiệp
-        của một nhà lãnh đạo cách mạng tiêu biểu. Giá trị lịch sử của di tích
-        thể hiện qua tính xác thực của không gian sinh hoạt, hiện vật và tư liệu
-        phản ánh bối cảnh xã hội Việt Nam đầu thế kỷ XX.
-        </p>
+<div class="container">
 
-        <p>
-        Từ góc độ nghiên cứu lịch sử, di tích có ý nghĩa như một nguồn tư liệu trực quan,
-        giúp tái hiện điều kiện sống, môi trường giáo dục và quá trình hình thành tư tưởng
-        cách mạng của nhân vật. Đây là yếu tố quan trọng góp phần lý giải sự phát triển
-        nhận thức chính trị trong bối cảnh đấu tranh giải phóng dân tộc.
-        </p>
+<h2 class="section-title">
 
-        <div class="image-block">
-            <img src="https://vnanet.vn/Data/Articles/2023/06/22/6796961/vna_potal_bao_tang_dai_tuong_nguyen_chi_thanh_se_mo_cua_don_khach_tham_quan_tu_ngay_67_stand.jpg">
-        </div>
+Các Khu Vực Trong Khu Lưu Niệm
 
-        <p>
-        Bên cạnh đó, di tích còn phản ánh vai trò của địa phương trong phong trào cách mạng,
-        góp phần khẳng định vị trí của Thừa Thiên Huế trong tiến trình lịch sử quốc gia.
-        </p>
+</h2>
 
-        <h3>3.2. Giá trị kiến trúc</h3>
+<div class="grid">
 
-        <p>
-        Xét về phương diện kiến trúc, nhà lưu niệm mang đặc trưng nhà rường truyền thống
-        của vùng Trung Bộ. Kết cấu gỗ, hệ thống cột kèo, mái ngói âm dương và không gian mở
-        thể hiện triết lý kiến trúc thích ứng với điều kiện khí hậu nhiệt đới gió mùa.
-        </p>
+<div class="card">
 
-        <p>
-        Bố cục không gian gồm nhà chính, sân vườn và khu vực phụ trợ,
-        tạo nên tổng thể hài hòa giữa kiến trúc và cảnh quan.
-        Đây là minh chứng cho nghệ thuật xây dựng dân gian,
-        đồng thời phản ánh phong cách sống giản dị của gia đình nông dân thời bấy giờ.
-        </p>
+<h3>Nhà Lưu Niệm</h3>
 
-        <div class="image-block">
-            <img src="https://photo-baomoi.bmcdn.me/w700_r1/2023_12_28_114_47933148/36376e9c19d0f08ea9c1.jpg">
-        </div>
+<p>
 
-        <p>
-        Việc bảo tồn kiến trúc nguyên bản không chỉ có ý nghĩa về mặt kỹ thuật,
-        mà còn góp phần giữ gìn bản sắc văn hóa địa phương trong bối cảnh hiện đại hóa.
-        </p>
+Nhà lưu niệm là một trong những công trình
+quan trọng trong khu di tích,
+gắn liền với tuổi thơ
+và cuộc sống của Đại tướng Nguyễn Chí Thanh.
 
-        <h3>3.3. Giá trị giáo dục</h3>
+Ngôi nhà do cụ Nguyễn Han xây dựng vào năm 1926
+theo kiến trúc nhà rường truyền thống của Huế
+với kết cấu một gian hai chái.
 
-        <p>
-        Trong hệ thống giáo dục truyền thống, di tích lịch sử đóng vai trò
-        như một “lớp học không tường”. Nhà lưu niệm Nguyễn Chí Thanh
-        là địa điểm tổ chức các hoạt động tham quan, học tập ngoại khóa,
-        góp phần nâng cao nhận thức về lịch sử và lòng yêu nước.
-        </p>
+Mái nhà được lợp bằng mây tranh,
+tường xây bằng gạch vồ
+và xung quanh là không gian sân vườn
+mang đậm nét kiến trúc làng quê Huế.
 
-        <p>
-        Giá trị giáo dục của di tích không chỉ nằm ở nội dung thuyết minh,
-        mà còn ở trải nghiệm không gian thực tế.
-        Sự kết hợp giữa yếu tố vật thể và phi vật thể
-        giúp tăng cường hiệu quả truyền đạt thông điệp lịch sử.
-        </p>
+</p>
 
-        <div class="image-block">
-            <img src="https://toquoc.mediacdn.vn/280518851207290880/2024/9/13/z58266171044274174dd76fb66188b5b6b54b3dbad39cb-1726214561262303381435.jpg">
-        </div>
+<br>
 
-        <h3>3.4. Tiềm năng khai thác du lịch bền vững</h3>
+<p>
 
-        <p>
-        Trong bối cảnh ngành du lịch chuyển dịch theo hướng bền vững,
-        các di tích lịch sử cách mạng có tiềm năng trở thành sản phẩm chuyên đề,
-        phục vụ nhóm khách quan tâm đến văn hóa – lịch sử.
-        </p>
+Trong khuôn viên nhà lưu niệm
+còn có nhiều hạng mục khác như
+nhà kiều, nhà thờ, nhà bếp,
+bình phong và sân vườn.
 
-        <p>
-        Việc xây dựng tuyến tham quan kết nối nhà lưu niệm với các điểm di tích lân cận,
-        kết hợp thuyết minh chuyên sâu và ứng dụng công nghệ số
-        sẽ góp phần nâng cao sức hấp dẫn của điểm đến.
-        </p>
+Đây là nơi lưu giữ
+những giá trị lịch sử quan trọng,
+tái hiện lại không gian sinh hoạt
+của gia đình Đại tướng
+trong những năm tháng đầu đời.
 
-        <div class="image-block">
-            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-3-1703776947003879913533.jpg">
-        </div>
+</p>
 
-        <p>
-        Tuy nhiên, để khai thác hiệu quả cần đảm bảo nguyên tắc bảo tồn,
-        tránh thương mại hóa quá mức làm suy giảm giá trị gốc của di tích.
-        </p>
+<br>
 
-    </div>
+<p>
+
+Trải qua thời gian dài
+và sự tàn phá của chiến tranh,
+đến năm 1968
+ngôi nhà đã bị sụp đổ hoàn toàn.
+
+Sau này,
+khu lưu niệm được phục dựng
+nhằm bảo tồn và tôn vinh
+những giá trị lịch sử gắn liền
+với cuộc đời Đại tướng.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Nhà Bia Tưởng Niệm</h3>
+
+<p>
+
+Nhà bia tưởng niệm
+là công trình được xây dựng
+để ghi nhớ công lao
+và những đóng góp to lớn
+của Đại tướng Nguyễn Chí Thanh
+đối với sự nghiệp cách mạng Việt Nam.
+
+</p>
+
+<br>
+
+<p>
+
+Công trình được xây dựng
+và hoàn thành vào năm 1999,
+nhân dịp kỷ niệm
+85 năm ngày sinh của Đại tướng.
+
+Nhà bia nằm ở vị trí trung tâm
+của khu di tích,
+tạo nên điểm nhấn trang nghiêm
+cho toàn bộ khu lưu niệm.
+
+</p>
+
+<br>
+
+<p>
+
+Tại đây thường xuyên diễn ra
+các hoạt động dâng hương,
+dâng hoa tưởng niệm,
+cũng như các hoạt động
+giáo dục truyền thống cách mạng
+cho học sinh, sinh viên
+và các đoàn khách tham quan.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Khu Sân Lễ Và Không Gian Tưởng Niệm</h3>
+
+<p>
+
+Phía trước nhà bia tưởng niệm
+là một khoảng sân rộng,
+được thiết kế trang nghiêm
+và hài hòa với cảnh quan chung
+của toàn bộ khu di tích.
+
+</p>
+
+<br>
+
+<p>
+
+Khu sân này
+thường được sử dụng
+để tổ chức các buổi lễ kỷ niệm,
+lễ dâng hương,
+dâng hoa tưởng niệm
+cũng như các chương trình
+giáo dục truyền thống lịch sử.
+
+</p>
+
+<br>
+
+<p>
+
+Nhiều tổ chức,
+đoàn thể,
+trường học
+đã lựa chọn nơi đây
+để tổ chức các hoạt động
+kết nạp Đoàn,
+kết nạp Đội
+hoặc sinh hoạt truyền thống,
+góp phần giáo dục
+lòng yêu nước
+cho thế hệ trẻ.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
-<section id="chuong4">
-    <h2 class="section-title">CHƯƠNG 4: GIẢI PHÁP PHÁT TRIỂN VÀ ĐỊNH HƯỚNG TƯƠNG LAI</h2>
-    <div class="content">
+<!-- VIDEO GIỚI THIỆU -->
 
-        <h3>4.1. Phân tích SWOT</h3>
-
-        <h4>4.1.1. Điểm mạnh (Strengths)</h4>
-        <p>
-        Di tích có giá trị lịch sử rõ ràng, gắn liền với nhân vật có vị trí quan trọng
-        trong lịch sử cách mạng Việt Nam. Không gian kiến trúc còn giữ được nét nguyên bản,
-        tạo điều kiện thuận lợi cho công tác bảo tồn và khai thác.
-        </p>
-
-        <h4>4.1.2. Điểm yếu (Weaknesses)</h4>
-        <p>
-        Công tác quảng bá còn hạn chế, lượng khách chưa ổn định.
-        Hạ tầng phục vụ du lịch như bãi đỗ xe, khu dịch vụ phụ trợ
-        chưa được đầu tư đồng bộ.
-        </p>
-
-        <div class="image-block">
-            <img src="data:image/webp;base64,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">
-        </div>
-
-        <h4>4.1.3. Cơ hội (Opportunities)</h4>
-        <p>
-        Xu hướng du lịch trải nghiệm văn hóa và tìm hiểu lịch sử ngày càng tăng.
-        Nhà nước quan tâm đến bảo tồn di tích và phát triển du lịch bền vững,
-        tạo điều kiện thuận lợi cho việc đầu tư nâng cấp.
-        </p>
-
-        <h4>4.1.4. Thách thức (Threats)</h4>
-        <p>
-        Sự cạnh tranh từ các điểm đến nổi tiếng khác tại Huế
-        có thể làm giảm khả năng thu hút khách.
-        Ngoài ra, tác động của thời tiết và biến đổi khí hậu
-        cũng ảnh hưởng đến công tác bảo tồn.
-        </p>
-
-        <h3>4.2. Giải pháp phát triển</h3>
-
-        <p>
-        Trước hết, cần xây dựng chiến lược truyền thông chuyên nghiệp,
-        ứng dụng nền tảng số như website, mạng xã hội và mã QR
-        để cung cấp thông tin đa ngôn ngữ cho du khách.
-        </p>
-
-        <p>
-        Thứ hai, cần đào tạo đội ngũ thuyết minh viên có kiến thức chuyên sâu,
-        đảm bảo tính chính xác và hấp dẫn trong truyền đạt nội dung.
-        </p>
-
-        <div class="image-block">
-            <img src="https://www.google.com/imgres?q=khu%20l%C6%B0u%20ni%E1%BB%87m%20nguy%E1%BB%85n%20ch%C3%AD%20thanh&imgurl=http%3A%2F%2Fbchqsthuathienhue.com.vn%2Fupload%2F103176%2Ffck%2Ftrantinhtthue%2F11(31).JPG&imgrefurl=http%3A%2F%2Fbchqsthuathienhue.com.vn%2Fquoc-phong-quan-su%2Fhoat-dong-quoc-phong-dia-phuong%2Fdang-hoa-dang-huong-tai-khu-di-tich-luu-niem-dai-tuong-nguyen-chi-thanh.html&docid=Zm1rMagAih4uQM&tbnid=HxxfO3MhiBa6EM&vet=12ahUKEwjq9P7g2_ySAxVTY_UHHQmrLZgQnPAOegQIMBAB..i&w=1600&h=1067&hcb=2&itg=1&ved=2ahUKEwjq9P7g2_ySAxVTY_UHHQmrLZgQnPAOegQIMBAB">
-        </div>
-
-        <p>
-        Thứ ba, cần liên kết với các trường học và tổ chức đoàn thể
-        để tổ chức các chương trình tham quan – học tập định kỳ,
-        qua đó nâng cao hiệu quả giáo dục truyền thống.
-        </p>
-
-        <h3>4.3. Định hướng phát triển dài hạn</h3>
-
-        <p>
-        Về lâu dài, di tích cần được tích hợp vào hệ thống tuyến tham quan
-        chuyên đề về lịch sử cách mạng tại Thừa Thiên Huế.
-        Việc kết nối này sẽ giúp đa dạng hóa sản phẩm du lịch
-        và nâng cao vị thế của điểm đến.
-        </p>
-
-        <p>
-        Đồng thời, cần áp dụng nguyên tắc phát triển bền vững,
-        đảm bảo hài hòa giữa bảo tồn và khai thác,
-        giữ vững giá trị gốc của di tích trong bối cảnh hiện đại hóa.
-        </p>
-
-        <div class="image-block">
-            <img src="http://tapchisonghuong.com.vn/tin-tuc/p0/c107/n13828/Cam-nghi-tu-khu-luu-niem-Dai-tuong-Nguyen-Chi-Thanh.html">
-        </div>
-
-    </div>
-</section>
-<section id="chuong5">
-    <h2 class="section-title">CHƯƠNG 5: PHÂN TÍCH THỰC TIỄN VÀ KHẢO SÁT ĐÁNH GIÁ</h2>
-    <div class="content">
-
-        <h3>5.1. Thực trạng hoạt động tham quan</h3>
-
-        <p>
-        Trong những năm gần đây, lượng khách tham quan tại Nhà lưu niệm
-        có xu hướng tăng nhẹ, tuy nhiên chưa tương xứng với tiềm năng.
-        Hoạt động tham quan chủ yếu tập trung vào học sinh, sinh viên
-        và các đoàn chính trị – xã hội.
-        </p>
-
-        <p>
-        Khách du lịch tự do và khách quốc tế chiếm tỷ lệ thấp.
-        Nguyên nhân chính đến từ việc thiếu thông tin quảng bá
-        và chưa tích hợp vào các tour tuyến phổ biến của địa phương.
-        </p>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.ocUej8rekHNtzhpYzvr9PQHaEK?w=326&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-        <h3>5.2. Khảo sát mức độ hài lòng của du khách (mô phỏng nghiên cứu)</h3>
-
-        <p>
-        Dựa trên khảo sát giả định với 200 khách tham quan,
-        kết quả cho thấy 78% đánh giá cao giá trị lịch sử,
-        65% hài lòng về nội dung thuyết minh,
-        nhưng chỉ 52% hài lòng về cơ sở vật chất.
-        </p>
-
-        <p>
-        Điều này cho thấy tiềm năng cải thiện dịch vụ phụ trợ
-        như bảng thông tin song ngữ, khu nghỉ chân,
-        và ứng dụng công nghệ trình chiếu tương tác.
-        </p>
-
-        <table border="1" cellpadding="10" cellspacing="0" width="100%">
-            <tr>
-                <th>Tiêu chí</th>
-                <th>Tỷ lệ hài lòng</th>
-            </tr>
-            <tr>
-                <td>Giá trị lịch sử</td>
-                <td>78%</td>
-            </tr>
-            <tr>
-                <td>Nội dung thuyết minh</td>
-                <td>65%</td>
-            </tr>
-            <tr>
-                <td>Cơ sở vật chất</td>
-                <td>52%</td>
-            </tr>
-        </table>
-
-        <h3>5.3. So sánh với các di tích cách mạng khác</h3>
-
-        <p>
-        So với các di tích cách mạng nổi tiếng tại miền Trung,
-        Nhà lưu niệm Nguyễn Chí Thanh có quy mô nhỏ hơn,
-        nhưng lại sở hữu ưu thế về tính nguyên bản và không gian truyền thống.
-        </p>
-
-        <p>
-        Việc học hỏi mô hình tổ chức sự kiện,
-        ứng dụng công nghệ số và phát triển sản phẩm lưu niệm
-        có thể giúp nâng cao sức cạnh tranh.
-        </p>
-
-        <div class="image-block">
-            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-9-17037769471471727135043.jpg">
-        </div>
-
-        <h3>5.4. Định hướng chuyển đổi số</h3>
-
-        <p>
-        Trong bối cảnh cách mạng công nghiệp 4.0,
-        chuyển đổi số là xu hướng tất yếu.
-        Nhà lưu niệm có thể xây dựng website chuyên đề,
-        tích hợp bản đồ ảo 3D, thuyết minh tự động và mã QR.
-        </p>
-
-        <p>
-        Điều này không chỉ nâng cao trải nghiệm du khách
-        mà còn giúp quảng bá hình ảnh rộng rãi trên nền tảng trực tuyến.
-        </p>
-
-        <div class="image-block">
-            <img src="https://www.bing.com/images/search?view=detailV2&ccid=%2bhcWk0dx&id=0B410ED20011981FDFE587C8FCC9EF615E633F45&thid=OIF.m0UeFIdi7Bh6knMQAkFXjg&mediaurl=https%3a%2f%2flookaside.fbsbx.com%2flookaside%2fcrawler%2fmedia%2f%3fmedia_id%3d1217754547028536&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.fa1716934771e76c0a3716b3a933b879%3frik%3d%26pid%3dImgRaw%26r%3d0&exph=1326&expw=1326&q=khu+l%c6%b0u+ni%e1%bb%87m+nguy%e1%bb%85n+ch%c3%ad+thanh&FORM=IRPRST&ck=9B451E148762EC187A9273100241578E&selectedIndex=71&itb=0">
-        </div>
-
-    </div>
-</section>
-<section id="chuong6">
-    <h2 class="section-title">CHƯƠNG 6: CHIẾN LƯỢC MARKETING DU LỊCH THEO MÔ HÌNH 7P</h2>
-    <div class="content">
-
-        <h3>6.1. Product (Sản phẩm)</h3>
-
-        <p>
-        Sản phẩm du lịch của Nhà lưu niệm Nguyễn Chí Thanh
-        thuộc nhóm du lịch văn hóa – lịch sử chuyên đề.
-        Cốt lõi sản phẩm là giá trị giáo dục truyền thống,
-        trải nghiệm không gian nhà rường nguyên bản
-        và hệ thống hiện vật gắn liền với cuộc đời nhân vật.
-        </p>
-
-        <p>
-        Sản phẩm mở rộng có thể bao gồm:
-        tour chuyên đề, trải nghiệm thuyết minh tương tác,
-        sản phẩm lưu niệm mang biểu tượng lịch sử,
-        và tài liệu nghiên cứu dành cho sinh viên.
-        </p>
-
-        <div class="image-block">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.CTRkBIP0h0I4cEOHeX6_KAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3">
-        </div>
-
-        <h3>6.2. Price (Giá)</h3>
-
-        <p>
-        Chiến lược giá nên linh hoạt theo từng nhóm khách:
-        miễn phí hoặc ưu đãi cho học sinh – sinh viên,
-        giá tiêu chuẩn cho khách lẻ,
-        và gói combo khi kết hợp với tuyến tham quan khác.
-        </p>
-
-        <p>
-        Việc áp dụng chính sách giá hợp lý
-        giúp đảm bảo khả năng tiếp cận rộng rãi
-        nhưng vẫn duy trì nguồn thu phục vụ bảo tồn.
-        </p>
-
-        <h3>6.3. Place (Phân phối)</h3>
-
-        <p>
-        Ngoài việc đón khách trực tiếp tại điểm,
-        cần mở rộng phân phối thông qua:
-        các công ty lữ hành,
-        nền tảng đặt tour trực tuyến,
-        và hệ thống thông tin du lịch địa phương.
-        </p>
-
-        <p>
-        Liên kết tuyến điểm với Đại Nội Huế,
-        lăng tẩm triều Nguyễn và các di tích cách mạng
-        sẽ tăng khả năng tiếp cận khách.
-        </p>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.gdfkb-vUb-GaMXrxXW0UwAHaEK?w=302&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-        <h3>6.4. Promotion (Xúc tiến)</h3>
-
-        <p>
-        Hoạt động truyền thông cần đa dạng hóa:
-        xây dựng website chính thức,
-        sử dụng mạng xã hội,
-        sản xuất video giới thiệu,
-        và tổ chức sự kiện kỷ niệm định kỳ.
-        </p>
-
-        <p>
-        Việc kết hợp nội dung storytelling
-        giúp tăng tính cảm xúc và khả năng lan tỏa.
-        </p>
-
-        <h3>6.5. People (Con người)</h3>
-
-        <p>
-        Đội ngũ thuyết minh viên đóng vai trò then chốt.
-        Cần đào tạo chuyên sâu về kiến thức lịch sử,
-        kỹ năng giao tiếp và ngoại ngữ.
-        </p>
-
-        <p>
-        Thái độ chuyên nghiệp và phong cách truyền đạt hấp dẫn
-        sẽ nâng cao chất lượng trải nghiệm du khách.
-        </p>
-
-        <div class="image-block">
-            <img src="https://file3.qdnd.vn/data/images/0/2023/07/25/vuhuyen/nguyen-chi-thanh.jpg?dpi=150&quality=100&w=870">
-        </div>
-
-        <h3>6.6. Process (Quy trình)</h3>
-
-        <p>
-        Quy trình đón tiếp cần được chuẩn hóa:
-        hướng dẫn tham quan,
-        thời gian thuyết minh,
-        quy định bảo vệ hiện vật,
-        và phản hồi ý kiến khách hàng.
-        </p>
-
-        <p>
-        Ứng dụng công nghệ như mã QR
-        giúp rút ngắn thời gian và tăng tính thuận tiện.
-        </p>
-
-        <h3>6.7. Physical Evidence (Cơ sở vật chất hữu hình)</h3>
-
-        <p>
-        Hình ảnh không gian, bảng thông tin,
-        đồng phục nhân viên và khu vực trưng bày
-        đều là yếu tố tạo ấn tượng ban đầu.
-        </p>
-
-        <p>
-        Cần đảm bảo tính thẩm mỹ,
-        sự sạch sẽ và bố trí khoa học
-        để nâng cao cảm nhận chuyên nghiệp.
-        </p>
-
-        <div class="image-block">
-            <img src="https://toquoc.mediacdn.vn/280518851207290880/2023/12/28/dai-tuong-nguyen-chi-thanh-13-17037769473191936094849.jpg">
-        </div>
-
-    </div>
-</section>
-<section id="chuong7">
-    <h2 class="section-title">CHƯƠNG 7: TÁC ĐỘNG KINH TẾ – XÃ HỘI VÀ GIÁ TRỊ CỘNG ĐỒNG</h2>
-    <div class="content">
-
-        <h3>7.1. Tác động kinh tế địa phương</h3>
-
-        <p>
-        Mặc dù quy mô không lớn như các quần thể di tích nổi tiếng,
-        Nhà lưu niệm Nguyễn Chí Thanh vẫn đóng góp nhất định vào
-        hệ sinh thái kinh tế du lịch địa phương.
-        </p>
-
-        <p>
-        Hoạt động tham quan tạo ra nguồn thu từ vé,
-        dịch vụ thuyết minh, sản phẩm lưu niệm
-        và kích thích tiêu dùng tại khu vực lân cận
-        như ăn uống, vận chuyển và mua sắm.
-        </p>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.ocUej8rekHNtzhpYzvr9PQHaEK?w=326&h=183&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-        <p>
-        Về lâu dài, nếu được đầu tư đúng hướng,
-        di tích có thể trở thành mắt xích quan trọng
-        trong chuỗi giá trị du lịch văn hóa tại Thừa Thiên Huế.
-        </p>
-
-        <h3>7.2. Tác động xã hội</h3>
-
-        <p>
-        Di tích góp phần củng cố bản sắc văn hóa địa phương
-        và nâng cao nhận thức cộng đồng về lịch sử cách mạng.
-        </p>
-
-        <p>
-        Thông qua các hoạt động giáo dục truyền thống,
-        nơi đây trở thành không gian sinh hoạt chính trị – văn hóa,
-        tăng cường sự gắn kết giữa các thế hệ.
-        </p>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.xKX2-gv2iCcZoIGv6SINMgHaFj?w=209&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-        <h3>7.3. Vai trò trong phát triển bền vững</h3>
-
-        <p>
-        Phát triển du lịch tại di tích cần tuân thủ nguyên tắc
-        bảo tồn gắn với khai thác hợp lý.
-        Mô hình phát triển bền vững phải đảm bảo
-        cân bằng giữa lợi ích kinh tế,
-        bảo tồn văn hóa và trách nhiệm xã hội.
-        </p>
-
-        <p>
-        Cộng đồng địa phương cần được tham gia vào quá trình quản lý,
-        qua đó tạo ra sự đồng thuận và chia sẻ lợi ích công bằng.
-        </p>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.7oome5O0PDtKoEBOXZxETwHaE7?w=285&h=190&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-    </div>
-</section>
-<section id="chuong7">
-    <h2 class="section-title">CHƯƠNG 7: TÁC ĐỘNG KINH TẾ – XÃ HỘI VÀ GIÁ TRỊ CỘNG ĐỒNG</h2>
-    <div class="content">
-
-        <h3>7.1. Tác động kinh tế địa phương</h3>
-
-        <p>
-        Mặc dù quy mô không lớn như các quần thể di tích nổi tiếng,
-        Nhà lưu niệm Nguyễn Chí Thanh vẫn đóng góp nhất định vào
-        hệ sinh thái kinh tế du lịch địa phương.
-        </p>
-
-        <p>
-        Hoạt động tham quan tạo ra nguồn thu từ vé,
-        dịch vụ thuyết minh, sản phẩm lưu niệm
-        và kích thích tiêu dùng tại khu vực lân cận
-        như ăn uống, vận chuyển và mua sắm.
-        </p>
-
-        <div class="image-block">
-            <img src="https://editorial01.shutterstock.com/preview/13702104p/0aaffad3/Shutterstock_13702104p.jpg">
-        </div>
-
-        <p>
-        Về lâu dài, nếu được đầu tư đúng hướng,
-        di tích có thể trở thành mắt xích quan trọng
-        trong chuỗi giá trị du lịch văn hóa tại Thừa Thiên Huế.
-        </p>
-
-        <h3>7.2. Tác động xã hội</h3>
-
-        <p>
-        Di tích góp phần củng cố bản sắc văn hóa địa phương
-        và nâng cao nhận thức cộng đồng về lịch sử cách mạng.
-        </p>
-
-        <p>
-        Thông qua các hoạt động giáo dục truyền thống,
-        nơi đây trở thành không gian sinh hoạt chính trị – văn hóa,
-        tăng cường sự gắn kết giữa các thế hệ.
-        </p>
-
-        <div class="image-block">
-            <img src="https://static-images.vnncdn.net/files/publish/2023/6/15/bao-tang-dai-tuong-nguyen-chi-thanh-tai-ha-noi-don-khach-tham-quan-thu-nghiem-806.jpeg">
-        </div>
-
-        <h3>7.3. Vai trò trong phát triển bền vững</h3>
-
-        <p>
-        Phát triển du lịch tại di tích cần tuân thủ nguyên tắc
-        bảo tồn gắn với khai thác hợp lý.
-        Mô hình phát triển bền vững phải đảm bảo
-        cân bằng giữa lợi ích kinh tế,
-        bảo tồn văn hóa và trách nhiệm xã hội.
-        </p>
-
-        <p>
-        Cộng đồng địa phương cần được tham gia vào quá trình quản lý,
-        qua đó tạo ra sự đồng thuận và chia sẻ lợi ích công bằng.
-        </p>
-
-        <div class="image-block">
-            <img src="https://maisonoffice.vn/wp-content/uploads/2024/05/2-3-tru-cot-chinh-cua-phat-trien-ben-vung.jpg">
-        </div>
-
-    </div>
-</section>
-<section id="chuong8">
-    <h2 class="section-title">CHƯƠNG 8: MÔ HÌNH QUẢN LÝ VÀ ĐỀ XUẤT CHÍNH SÁCH</h2>
-    <div class="content">
-
-        <h3>8.1. Cơ cấu quản lý hiện tại</h3>
-
-        <p>
-        Di tích hiện được quản lý bởi cơ quan văn hóa địa phương.
-        Cơ chế quản lý mang tính hành chính,
-        chưa áp dụng mạnh mẽ mô hình quản trị hiện đại.
-        </p>
-
-        <p>
-        Việc phân quyền và tự chủ tài chính còn hạn chế,
-        ảnh hưởng đến tính linh hoạt trong hoạt động quảng bá.
-        </p>
-
-        <div class="image-block">
-            <img src="https://file3.qdnd.vn/data/images/0/2023/07/25/vuhuyen/nguyen-chi-thanh.jpg?dpi=150&quality=100&w=870">
-        </div>
-
-        <h3>8.2. Đề xuất mô hình quản lý kết hợp</h3>
-
-        <p>
-        Có thể áp dụng mô hình hợp tác công – tư (PPP),
-        trong đó Nhà nước giữ vai trò bảo tồn,
-        còn doanh nghiệp tham gia khai thác dịch vụ phụ trợ.
-        </p>
-
-        <p>
-        Mô hình này giúp tăng nguồn lực đầu tư
-        nhưng vẫn đảm bảo giá trị lịch sử không bị thương mại hóa.
-        </p>
-
-        <h3>8.3. Kiến nghị chính sách</h3>
-
-        <ul>
-            <li>Tăng ngân sách bảo tồn định kỳ.</li>
-            <li>Hỗ trợ đào tạo nhân lực chuyên môn cao.</li>
-            <li>Xây dựng chiến lược truyền thông cấp tỉnh.</li>
-            <li>Ứng dụng chuyển đổi số toàn diện.</li>
-        </ul>
-
-        <div class="image-block">
-            <img src="https://th.bing.com/th/id/OIP.27-jFDgnuy0c1QwFw9uM4AHaEL?w=292&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3">
-        </div>
-
-    </div>
-</section>
-<section id="phuluc">
-    <h2 class="section-title">PHỤ LỤC</h2>
-    <div class="content">
-
-        <h3>Phụ lục 1: Dòng thời gian sự kiện tiêu biểu</h3>
-
-        <ul>
-            <li>1914 – Nguyễn Chí Thanh sinh tại Thừa Thiên Huế.</li>
-            <li>1937 – Tham gia phong trào cách mạng.</li>
-            <li>1945 – Tham gia lãnh đạo trong Cách mạng tháng Tám.</li>
-            <li>1950 – Giữ vai trò quan trọng trong công tác quân sự.</li>
-            <li>1967 – Qua đời, để lại nhiều đóng góp lớn cho cách mạng.</li>
-            <li>1990 – Nhà lưu niệm được trùng tu lần đầu.</li>
-            <li>2005 – Được công nhận là di tích lịch sử cấp quốc gia.</li>
-            <li>2015 – Nâng cấp hệ thống trưng bày hiện vật.</li>
-            <li>2020 – Ứng dụng mã QR trong thuyết minh.</li>
-            <li>2023 – Định hướng chuyển đổi số toàn diện.</li>
-        </ul>
-
-        <h3>Phụ lục 2: Bảng tổng hợp đề xuất chiến lược</h3>
-
-        <table border="1" cellpadding="10" cellspacing="0" width="100%">
-            <tr>
-                <th>Lĩnh vực</th>
-                <th>Giải pháp đề xuất</th>
-            </tr>
-            <tr>
-                <td>Marketing</td>
-                <td>Triển khai 7P, xây dựng thương hiệu chuyên đề.</td>
-            </tr>
-            <tr>
-                <td>Bảo tồn</td>
-                <td>Trùng tu định kỳ, giám sát chuyên môn.</td>
-            </tr>
-            <tr>
-                <td>Chuyển đổi số</td>
-                <td>Website 3D, thuyết minh đa ngôn ngữ.</td>
-            </tr>
-            <tr>
-                <td>Giáo dục</td>
-                <td>Liên kết trường học tổ chức tham quan định kỳ.</td>
-            </tr>
-        </table>
-
-    </div>
-</section>
-<section id="ketluan">
-    <h2 class="section-title">KẾT LUẬN</h2>
-    <div class="content">
-
-        <p>
-        Nhà lưu niệm Nguyễn Chí Thanh không chỉ là công trình kiến trúc
-        mang giá trị lịch sử, mà còn là không gian giáo dục truyền thống
-        có ý nghĩa quan trọng trong bối cảnh phát triển du lịch văn hóa hiện nay.
-        </p>
-
-        <p>
-        Qua quá trình phân tích các giá trị lịch sử, kiến trúc, giáo dục
-        cũng như đánh giá thực trạng khai thác và đề xuất chiến lược marketing,
-        có thể khẳng định rằng di tích sở hữu tiềm năng phát triển bền vững
-        nếu được đầu tư và quản lý đúng hướng.
-        </p>
-
-        <p>
-        Việc kết hợp bảo tồn với khai thác hợp lý,
-        ứng dụng công nghệ số và tăng cường liên kết tuyến điểm
-        sẽ góp phần nâng cao vị thế của di tích trong hệ thống du lịch Huế.
-        </p>
-
-        <p>
-        Trong tương lai, Nhà lưu niệm Nguyễn Chí Thanh
-        có thể trở thành điểm đến chuyên đề tiêu biểu,
-        đóng góp tích cực vào phát triển kinh tế – xã hội địa phương
-        và gìn giữ giá trị lịch sử cho các thế hệ mai sau.
-        </p>
-
-    </div>
-</section>
-<section id="tailieuthamkhao">
-    <h2 class="section-title">TÀI LIỆU THAM KHẢO</h2>
-    <div class="content">
-        <ol>
-            <li>Bộ Văn hóa, Thể thao và Du lịch (2020). Tài liệu hướng dẫn bảo tồn di tích.</li>
-            <li>Nguyễn Văn A (2018). Du lịch văn hóa Việt Nam. NXB Đại học Quốc gia.</li>
-            <li>Trần Thị B (2019). Marketing du lịch hiện đại. NXB Kinh tế.</li>
-            <li>Ủy ban Nhân dân Thừa Thiên Huế (2022). Báo cáo phát triển du lịch.</li>
-            <li>Kotler, P. (2017). Marketing Management.</li>
-        </ol>
-    </div>
-</section>
 <section id="video">
-    <h2 class="section-title">VIDEO GIỚI THIỆU</h2>
 
-    <div class="video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/h4p_hVPeDZ4"
-            title="Video giới thiệu Nhà lưu niệm Nguyễn Chí Thanh"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    </div>
-</section>
-<footer style="background:#0f3057; color:white; padding:40px; text-align:center;">
-    <p><strong>Đề tài nghiên cứu:</strong> Khai thác giá trị di tích Nhà lưu niệm Nguyễn Chí Thanh trong phát triển du lịch văn hóa</p>
+<div class="container">
+
+<h2 class="section-title">
+
+Video Giới Thiệu Khu Lưu Niệm
+
+</h2>
+
+<div class="video">
+
+ 
    
-    <p>Lớp: 12b1 – nhóm 2</p>
-    <p>© 2026 – Website nghiên cứu học thuật</p>
+               <iframe 
+    src="https://www.youtube.com/embed/h4p_hVPeDZ4" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- HÌNH ẢNH LƯU NIỆM -->
+
+<section id="hinhanh">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Một Số Hình Ảnh Lưu Niệm
+
+</h2>
+
+<div class="gallery">
+
+<img src="https://cdn.tcdulichtphcm.vn/upload/1-2024/images/2024-03-22/z5273047100843_211f8fc13d18866ae707cb7502aa9c0a-1711098579-573-width1429height1072.jpg">
+
+<img src="data:image/jpeg;base64,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">
+
+<img src="data:image/jpeg;base64,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">
+
+<img src="https://cdn.tcdulichtphcm.vn/upload/1-2024/images/2024-03-22/z5272828916880_673e521d4a609b499c5f8674b0d4a624-1711098579-592-width1430height953.jpg">
+
+<img src="data:image/jpeg;base64,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">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt_HupVtGa0ghpepHXo8FR6-CrVwEvdLhmcw&s">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+Website giới thiệu Khu lưu niệm
+Đại tướng Nguyễn Chí Thanh
+
+</p>
+
+<br>
+
+<p>
+
+Địa điểm:
+Thôn Niêm Phò – Xã Quảng Thọ –
+Huyện Quảng Điền – Thừa Thiên Huế
+
+</p>
+
+<br>
+
+<p>
+
+Nguồn tham khảo:
+
+</p>
+
+<p>
+
+https://quangdien.thuathienhue.gov.vn
+
+</p>
+
+<p>
+
+Google Business – Nhà lưu niệm
+Đại tướng Nguyễn Chí Thanh
+
+</p>
+
+</div>
+
 </footer>
+
+
+
+<!-- SCRIPT HIỆU ỨNG NAVBAR -->
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+const header=document.querySelector("header");
+
+if(window.scrollY>50){
+
+header.style.background="rgba(255,255,255,0.9)";
+header.style.boxShadow="0 5px 20px rgba(0,0,0,0.1)";
+
+}
+
+else{
+
+header.style.background="rgba(255,255,255,0.35)";
+header.style.boxShadow="none";
+
+}
+
+});
+
+</script>
+
+
 
 </body>
 
 </html>
-
 
